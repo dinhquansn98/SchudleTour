@@ -1,0 +1,116 @@
+﻿@model Model.EF.ListViewDvdd
+
+@{
+    ViewBag.Title = "Danhsachdvdd";
+}
+
+<div style="display: flex ; flex-direction:column; justify-content: center; align-items:center;">
+    <h2>Danh Sách Dịch Vụ Địa Điểm</h2>
+</div>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="~/css/StyleSheet1.css">
+</head>
+
+<body>
+
+    <div class="containertable" style="display:flex ; margin-top:80px; ">
+        <div class="table" style="width:50%;">
+            <table id="customers">
+                <tr>
+                    <th>
+                        Tên Dịch vụ
+                    </th>
+                    <th>
+                        Đơn Giá
+                    </th>
+                    <th>
+                        Mô Tả
+                    </th>
+
+                    <th>
+
+                    </th>
+
+                </tr>
+                @foreach (var value in Model.listdichvu)
+                {
+
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => value.DichvuName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => value.Dongia)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => value.DichvuMota)
+                        </td>
+                        <td style="width:10%">
+                            <form method="post" action="~/Nhacungcap/Chonnhacungcap">
+                                <input type="hidden" name="submitdichvu" value=@Html.DisplayFor(modelItem => value.DichvuID) />
+                                <button id="buttom" type="submit">
+                                    Chọn
+                                </button>
+                            </form>
+                        </td>
+                    </tr>
+
+                }
+            </table>
+
+        </div>
+        <div class="table" style="width:50%;">
+            <table id="customers">
+                <tr>
+                    <th>
+                        Tên Địa Điểm
+                    </th>
+                    <th>
+                        Đơn Giá
+                    </th>
+                    <th>
+                        Mô Tả
+                    </th>
+                    <th>
+
+                    </th>
+
+                </tr>
+                @foreach (var value in Model.listdiadiem)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => value.DiadiemName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => value.Dongia)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => value.Mota)
+                        </td>
+                        <td style="width:10%">
+                            <form method="post" action="~/Lichtrinh/AddTime">
+                                <input type="hidden" name="submitdiadiem" value=@Html.DisplayFor(modelItem => value.DiadiemID) />
+                                <button id="buttom" type="submit">
+                                    Chọn
+                                </button>
+                            </form>
+                        </td>
+
+                    </tr>
+                }
+            </table>
+
+        </div>
+    </div>
+    <div>
+        <hr />
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</body>
+
+
+</html>

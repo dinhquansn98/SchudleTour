@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewBag.Title = "Sreachdvdd";
+}
+
+<div style="display: flex ; flex-direction:column; justify-content: center; align-items:center;">
+    <h2>Tìm kiếm</h2>
+</div>
+<head>
+    <link rel="stylesheet" href="~/css/StyleSheet1.css">
+</head>
+<div style=" margin-top:60px;  display:flex ; flex-direction:row; justify-content : center; align-items:center;">
+    <form name="myform" onsubmit="return validateFrom()" action="~/Danhsachdvdd/Danhsachdvdd" method="post" style=" display:flex; flex-direction:column; justify-content:center; align-items:center;  width:100%;">
+        <input name="namesreach" type="text" class="form-control" placeholder="Search">
+        <div style=" margin-top:50px;  display:flex ; flex-direction:row; justify-content : center; align-items:center;">
+            <button style="width:150px; display:flex; flex-direction:row; justify-content:center;" id="buttom" type="submit">
+                Search
+            </button>
+            
+        </div>
+       
+    </form>
+  
+</div>
+<div>
+    <hr />
+</div>
+
+
+
+<script type="text/javascript" src="~/Scripts/jquery-3.4.1.min.js">
+</script>
+<script type="text/javascript">
+    function validateFrom() {
+        var namesearch = document.forms["myform"]["namesreach"].value;
+        if (namesearch == "") {
+            alert("vui lòng nhập tên tìm kiếm ");
+            return false;
+        }
+
+    }
+
+</script>

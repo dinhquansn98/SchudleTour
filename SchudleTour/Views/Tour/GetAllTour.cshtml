@@ -1,0 +1,79 @@
+﻿@model IEnumerable<Model.EF.Tour>
+
+@{
+    ViewBag.Title = "GetAllTour";
+}
+
+<div style="display: flex ; flex-direction:column; justify-content: center; align-items:center;">
+    <h2>Danh sách Tour</h2>
+    <form style="margin-top:20px ; margin-bottom: 5px;" action="~/Tour/CreateTour">
+        <button id="buttom" type="submit"
+                class="btn btn-outline-dark">
+            Thêm Tour
+        </button>
+    </form>
+
+</div>
+
+<head>
+    <link rel="stylesheet" href="~/css/StyleSheet1.css">
+</head>
+
+
+<div class="containertable" style="display:flex  ">
+    <div class="table">
+        <table id="customers">
+            <tr>
+                <th>
+                    Tên
+                </th>
+                <th>
+                    Số vé
+                </th>
+                <th>
+                    Ngày tạo
+                </th>
+
+                <th>
+                    Ngày đi
+                </th>
+                <th>
+                    Ngày về
+                </th>
+                <th>
+                    Hưỡng dẫn viên
+                </th>
+
+
+            </tr>
+
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TourName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SoVe)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Ngaytao)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Ngayxuatphat)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Ngayketthuc)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Nhanvien.Thanhvien.Hoten.Ho)
+                        @Html.DisplayFor(modelItem => item.Nhanvien.Thanhvien.Hoten.Tendem)
+                        @Html.DisplayFor(modelItem => item.Nhanvien.Thanhvien.Hoten.Ten)
+                    </td>
+
+                </tr>
+            }
+
+        </table>
+        <hr />

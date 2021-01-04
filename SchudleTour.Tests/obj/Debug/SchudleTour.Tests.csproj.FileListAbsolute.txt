@@ -1,0 +1,2 @@
+D:\SchudleTour\SchudleTour.Tests\obj\Debug\SchudleTour.Tests.csprojAssemblyReference.cache
+D:\SchudleTour\SchudleTour.Tests\obj\Debug\SchudleTour.Tests.csproj.CoreCompileInputs.cache

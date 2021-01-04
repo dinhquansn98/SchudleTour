@@ -1,0 +1,117 @@
+﻿body {
+}
+html {
+    position: relative;
+}
+
+#linkaction{
+    color:;
+    under
+   
+}
+    #linkaction :hover{
+     
+    }
+    #buttom {
+        padding-top: 8px;
+        padding-bottom: 8px;
+        text-align: left;
+        background-color: #292c2b;
+        color: white;
+        border-radius: 15px;
+        border: none;
+    }
+#buttom:hover{
+    background-color :#141313;
+    outline:none;
+}
+
+#customers {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+
+#customers td,
+#customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#customers tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#customers tr:hover {
+    background-color: #ddd;
+}
+
+    #customers th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: center;
+        background-color: #292c2b;
+        color: white;
+    }
+
+.containerBox {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.searchBox {
+    display: flex;
+    width: 50%;
+}
+
+#buttonSearch {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: #f10884;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+}
+
+#buttonSearch:hover {
+    background: #be0f6d;
+}
+
+#ipsearch {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+}
+
+#viewAll {
+    text-decoration: underline;
+    cursor: pointer;
+    margin: 20px;
+    font-size: large;
+}
+
+#buttomExtra {
+    cursor: pointer;
+    position: fixed;
+    right: 1%;
+    bottom: 35%;
+    border-radius: 50%;
+    padding: 0%;
+}
+
+#imageExtra {
+    width: 60px;
+    height: auto;
+    background-color: #4CAF50;
+    padding: 0%;
+    border-radius: 50%;
+}

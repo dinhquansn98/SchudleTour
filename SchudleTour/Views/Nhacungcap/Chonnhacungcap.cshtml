@@ -1,0 +1,70 @@
+﻿@model IEnumerable<Model.EF.NhacungcapView>
+@{
+    ViewBag.Title = "Chonnhacungcap";
+}
+
+<div style="display: flex ; flex-direction:column; justify-content: center; align-items:center;">
+    <h2>Chọn Nhà Cung Cấp</h2>
+</div>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="~/css/StyleSheet1.css">
+</head>
+
+<body>
+
+    <div class="containertable" style="display:flex ;margin-top:60px; ">
+        <div class="table" style="width:100%;">
+            <table id="customers">
+                <tr>
+
+                    <th>
+                        Tên
+                    </th>
+                    <th>
+                        Email
+                    </th>
+                    <th>
+                        Sdt
+                    </th>
+                    <th>
+
+                    </th>
+
+                </tr>
+                @foreach (var item in Model)
+                {
+                    <tr>
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.NccName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Email)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Sdt)
+                        </td>
+
+                        <td style="width:10%">
+                            <form method="post" action="~/Lichtrinh/AddTime">
+                                <input type="hidden" name="submitdichvu" value=@Html.DisplayFor(modelItem => item.IDDichvuNcc) />
+                                <button id="buttom" type="submit">
+                                    Chọn
+                                </button>
+                            </form>
+                        </td>
+                    </tr>
+
+                }
+            </table>
+            <hr />
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</body>
+
+
+
+</html>

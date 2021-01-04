@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "AddTime";
+}
+
+
+<div style="display: flex ; flex-direction:column; justify-content: center; align-items:center;">
+    <h2>Thời Gian</h2>
+</div>
+
+<head>
+    <link rel="stylesheet" href="~/css/StyleSheet1.css">
+</head>
+
+<div style=" margin-top:60px;  display:flex ; flex-direction:row; justify-content : center; align-items:center;">
+    <form method="post" action="~/Lichtrinh/CreateLichtrinh">
+        <div class="form-group col-md-6">
+            <label>Thời gian đến</label>
+            <input type="datetime-local" class="form-control" name="thoigianden" value="" />
+        </div>
+        <div class="form-group col-md-6">
+            <label>Thời gian đi</label>
+            <input type="datetime-local" class="form-control" name="thoigiandi" value="" />
+        </div> 
+        <input type="hidden" name="idDiadiem" value=@ViewBag.idDiadiem />
+        <input type="hidden" name="idDichvu" value=@ViewBag.idDichvu />
+        <div class="form-group col-md-12 ">
+            <div style="display:flex ;justify-content:space-around ">
+                <button type="submit" id="buttom">
+                    Thêm
+                </button>
+            </div>
+        </div>
+
+    </form>
+</div>
+
+<div>
+    <hr />
+</div>

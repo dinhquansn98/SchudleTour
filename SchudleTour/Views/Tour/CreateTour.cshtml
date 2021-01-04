@@ -1,0 +1,77 @@
+﻿
+@model IEnumerable<Model.EF.Nhanvien>
+
+@{
+    ViewBag.Title = "CreateTour";
+}
+
+<div style="display: flex ; flex-direction:column; justify-content: center; align-items:center;">
+    <h2>Tạo Tour</h2>
+</div>
+<head>
+    <link rel="stylesheet" href="~/css/StyleSheet1.css">
+</head>
+
+
+<div style=" margin-top: 20px; display:flex ; flex-direction:column; justify-content : center; align-items:center;">
+    <form style="margin-right:720px;" action="/Lichtrinh/CreateLichtrinh">
+        <button id="buttom" type="submit">
+            Lên lịch trình
+        </button>
+    </form>
+    @using (Html.BeginForm("SetData", "Tour", FormMethod.Post))
+    {
+        <div style="margin-left:120px ; margin-top: 20px;" class="form-row ">
+            <div class="form-group col-md-6">
+                <label>Tên</label>
+                <input class="form-control" id="nameTour" name="nameTour" value="">
+            </div>
+            <div class="form-group col-md-6">
+                <label>Số vé</label>
+                <input class="form-control" name="soVe" id="soVe" value="">
+            </div>
+        </div>
+        <div style="margin-left:120px ;" class="form-row">
+            <div class="form-group col-md-6">
+                <label>Mô tả</label>
+                <input type="text" class="form-control" id="moTa" name="moTa" value="">
+            </div>
+            <div class="form-group col-md-6">
+                <label>Hướng dẫn viên</label>
+                <select id="huongdanvien" name="huongdanvien" class="form-control">
+                    <option selected>Choose...</option>
+                    @foreach (var item in Model)
+                    {
+                        <option value=@Html.DisplayFor(modelitem => item.IDNhanvien)>
+                            @Html.DisplayFor(modelitem => item.Thanhvien.Hoten.Ho)
+                            @Html.DisplayFor(modelitem => item.Thanhvien.Hoten.Tendem)
+                            @Html.DisplayFor(modelitem => item.Thanhvien.Hoten.Ten)
+                        </option>
+                    }
+
+                </select>
+            </div>
+            <div class="form-group col-md-6">
+                <label>Thời gian đi</label>
+                <input type="datetime-local" class="form-control" name="ngayxuatphat" id="ngayxuatphat">
+            </div>
+            <div class="form-group col-md-6">
+                <label>Thời gian về</label>
+                <input type="datetime-local" class="form-control" name="ngayketthuc" id="ngayketthuc">
+            </div>
+        </div>
+        <div class="form-group col-md-12 ">
+            <div style="display:flex ;justify-content:space-around ">
+                <button type="submit" id="buttom">
+                    Tạo Tour
+                </button>
+
+            </div>
+        </div>
+    }
+    <form method="post" name="myform" onsubmit="return validateFrom()" action="~/Tour/GetAllTour">
+    </form>
+
+</div>
+<hr />
+

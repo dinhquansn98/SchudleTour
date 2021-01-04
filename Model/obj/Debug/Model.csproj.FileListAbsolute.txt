@@ -1,0 +1,12 @@
+D:\SchudleTour\Model\bin\Debug\Model.dll.config
+D:\SchudleTour\Model\bin\Debug\Model.dll
+D:\SchudleTour\Model\bin\Debug\Model.pdb
+D:\SchudleTour\Model\bin\Debug\EntityFramework.dll
+D:\SchudleTour\Model\bin\Debug\EntityFramework.xml
+D:\SchudleTour\Model\obj\Debug\Model.csprojAssemblyReference.cache
+D:\SchudleTour\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+D:\SchudleTour\Model\obj\Debug\Model.csproj.CopyComplete
+D:\SchudleTour\Model\obj\Debug\Model.dll
+D:\SchudleTour\Model\obj\Debug\Model.pdb
+D:\SchudleTour\Model\bin\Debug\EntityFramework.SqlServer.dll
+D:\SchudleTour\Model\bin\Debug\EntityFramework.SqlServer.xml
